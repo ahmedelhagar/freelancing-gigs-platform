@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond $1 !^(index\.php|images|robots\.txt|img|vendor|fonts|.well-known|chat)
+RewriteRule ^(.*)$ /istsharh/index.php/$1 [L]
+Options +FollowSymLinks -MultiViews
+</IfModule>
+php_value upload_max_filesize 999M
+php_value post_max_size 999M
